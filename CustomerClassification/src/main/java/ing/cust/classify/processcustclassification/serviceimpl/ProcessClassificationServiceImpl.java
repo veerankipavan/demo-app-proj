@@ -22,7 +22,6 @@ public class ProcessClassificationServiceImpl implements ProcessClassificationSe
 	final DateFormat opformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	@Override
 	public List<Customer> getDataFile() {
-		FileReader datafileReader = null;
 		BufferedReader buffreader = null;
 
 		List<Customer> custList = new ArrayList<Customer>();
@@ -36,7 +35,6 @@ public class ProcessClassificationServiceImpl implements ProcessClassificationSe
 			Customer cust = null;
 			String line = "";
 			String[] arrs = null;
-			int num = 0;
 			DateFormat format = null;
 
 			Date date = null;
@@ -172,7 +170,6 @@ public class ProcessClassificationServiceImpl implements ProcessClassificationSe
 		
 		
 		List<Customer> cust7daysSorting =  response.getCusttransactions();
-		List<Customer> calc7Cust =  new ArrayList<Customer>();
 		double sevenDaysDeposit =0.00;
 		double sevenDaysWithDrawals =0.00;
 		Collections.sort(cust7daysSorting, new Comparator<Customer>() {

@@ -1,13 +1,13 @@
 package ing.cust.classify.custrequestcontroller.web;
 
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeSet;
 
 import javax.servlet.http.HttpServletRequest;
@@ -59,7 +59,7 @@ public class ClassificationRequestController {
 	    System.out.println("Request: " + req.getRequestURL() + " raised " + ex);
 
 	    ModelAndView mav = new ModelAndView();
-	    mav.setViewName("Index");
+	    mav.setViewName("displayError");
 	    return mav;
 	  }
 	
@@ -108,7 +108,7 @@ public class ClassificationRequestController {
 			Collections.replaceAll(items,processClassificationService.Fast_Spender,processClassificationService.Potential_Loan);
 		}
 			
-		 TreeSet set =new TreeSet(items);
+		 Set set =new TreeSet(items);
 
 		String  evaluateClassification = new String();
 
