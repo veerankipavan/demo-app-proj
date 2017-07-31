@@ -23,7 +23,7 @@ OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
 
 --> Navigate to the CustomerClassification folder, for exp: C:\demo-app-proj.git\CustomerClassification
 --> Finally run command as --> mvn clean spring-boot:run
---> Should be able to access the App Hosted on the port 9080 --> http://localhost:9080/displayClassification
+--> Should be able to access the App Hosted on the port 9080 --> http://localhost:9080/inputCustomerInfo
 
 
 
